@@ -5,7 +5,6 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class PercolationStats {
-	//private int sum;
 	private Percolation perc;
 	private int T;
 	private int N;
@@ -14,7 +13,6 @@ public class PercolationStats {
 	private double cLo;
 	private double cHi;
 	private int opSite;
-	//private double[] p;
 	
    public PercolationStats(int n, int trials)   // perform trials independent experiments on an n-by-n grid
    {
@@ -45,12 +43,6 @@ public class PercolationStats {
 	   s = StdStats.stddev(p);
 	   cLo = m - 1.96*s/Math.sqrt(T);
 	   cHi = m + 1.96*s/Math.sqrt(T);
-	   
-	 //call mean ,stddev, etc
-	 // StdOut.println( mean()) ;
-	   //StdOut.println( stddev()) ;
-	   //StdOut.println( confidenceLo() , confidenceHi() ) ;
-	   //StdOut.println(confidenceHi() ) ;
 	   }   
    }
    public double mean()                         // sample mean of percolation threshold
@@ -68,19 +60,13 @@ public class PercolationStats {
    public double confidenceLo()                // low  endpoint of 95% confidence interval
    {   //mean-SD
 	   return cLo ;
-	   //return mean() - 1.96*stddev()/Math.sqrt(T);
    }
    public double confidenceHi()               // high endpoint of 95% confidence interval
    {  //mean+SD
 	   return cHi;
-	   //return mean() + 1.96*stddev()/Math.sqrt(T);
    }
    public static void main(String[] args)
    {
-	 // new PercolationStats(2, 100000) ;
-	  //per.PercolationStats() ;
-	 //PercolationStats(2 , 100) ; 
-	  //StdOut.println( per.mean()) ;
 	 
    }
 
