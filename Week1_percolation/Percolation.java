@@ -78,30 +78,18 @@ public class Percolation {
 		   int q = trans(row,col-1) ;
 		   uf.union(p,q) ;
 		   nuf.union(p,q) ;
-		   // check if q is connected to source
-		   // if p is in last row then connect to sink
-		 // if(isFull(row,col-1) == true && row == size)
-		 // {uf.union(p, sink) ; }
 	   }
 	   if(row !=1 && isOpen(row-1,col)==true) // top, first row has no top
 	   {
 		   int q=trans(row-1,col) ;
 		   uf.union(p,q) ;
 		   nuf.union(p,q) ;
-		 //check if q is connected to source
-		   //if p is in last row then connect to sink
-		  // if(isFull(row-1,col)==true && row == size)
-		 // {  uf.union(p, sink) ; }
 	   }
 	   if(col != size && isOpen(row,col+1)==true) // right, last col has no right
 	   {
 		   int q = trans(row,col+1) ;
 		   uf.union(p,q) ;
 		   nuf.union(p,q) ;
-		 //check if q is connected to source
-		   //if p is in last row then connect to sink
-		  //if(isFull(row,col+1)==true && row == size)
-		// { uf.union(p, sink) ;}
 	   } 
 	   if(row !=size && isOpen(row+1,col)==true) //bottom, last row has no bottom
 	   {
@@ -110,12 +98,6 @@ public class Percolation {
 		   nuf.union(p,q) ;
 	   }
 	
-	   //	BACKWASH ALT
-	//after connecting recently opened site to its open neighbors
-	//check if it id connected to the source b4 connect to sink instead of just connecting to sink like earlier   
-	   //connecting row n-1 to sink back washing prob
-		 // if(row==size && isFull(row,col))
-		  //{ uf.union(sink, p);} 
    }
 	   }
    
@@ -146,17 +128,8 @@ public class Percolation {
 	  int p = trans(row,col) ;
 	  return nuf.connected(p,source) ;   //use nuf instead that has only source
 	   }
-	   
-	   //for( int j=1; j<=n ; j++) linear time
-	   //{
-			 //int q = trans(1,j) ;
-			// if ( uf.connected(p,q) != true)
-			// {
-				//return false; 
-			// }
-		 //}
-	   //return true; // connected to top
-	   }
+	
+         }
    
    public     int numberOfOpenSites()      // number of open sites
    {
@@ -170,9 +143,7 @@ public class Percolation {
 
    public static void main(String[] args)  // test client (optional)
    {
-	   //int n = StdIn.readInt();
-	  
-        
+ 
    }
 
 }
