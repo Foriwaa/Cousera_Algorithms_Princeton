@@ -1,15 +1,12 @@
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
-//import java.lang.*;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item> {
-   
 	private Node first, last;    // beginning of queue
-    //private Node<Item> last;     // end of queue
-    private int size;
+	private int size;
 	
  // helper linked list class
     private class Node 
@@ -19,7 +16,7 @@ public class Deque<Item> implements Iterable<Item> {
 
         public Node(Item item) 
         {
-            this.item = item;
+		this.item = item;
         }
     }
 	
