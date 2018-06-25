@@ -20,8 +20,6 @@ public class Deque<Item> implements Iterable<Item> {
         }
     }
 	
-    
-    
     //initialise empty deque
     public Deque()                           // construct an empty deque
     {
